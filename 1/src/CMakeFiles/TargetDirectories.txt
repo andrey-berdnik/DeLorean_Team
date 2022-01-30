@@ -1,0 +1,3 @@
+/home/ubuntumaster/Documents/b/1/src/CMakeFiles/rebuild_cache.dir
+/home/ubuntumaster/Documents/b/1/src/CMakeFiles/edit_cache.dir
+/home/ubuntumaster/Documents/b/1/src/CMakeFiles/hello.dir
