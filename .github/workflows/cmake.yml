@@ -18,15 +18,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: checkout 
+      uses: actions/checkout@v2
     
     - name: cppcheck
-    - uses: myml/action-cppcheck@main
+      uses: myml/action-cppcheck@main
       with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           pull_request_id: ${{ github.event.number }}
-          
+              
     - name: Configure CMake
       run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
