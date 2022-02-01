@@ -22,7 +22,7 @@ jobs:
       uses: actions/checkout@v2
     
     - name: cppcheck
-      uses: tonybaloney/cppcheck-action@master
+      run:  apt-get -qq -y install curl cmake jq clang cppcheck &&  cppcheck --enable=all --inconclusive -i./build --std=c++14 . 
               
     - name: Configure CMake
       run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
